@@ -1,37 +1,39 @@
 <section class="container">
-  <div class="brand-style">
+  <div class="groupsShowPage">
     <h2>Property Details</h2>
-
-    <div class="row houseInfo border" ng-repeat="selected in groupsPropsShow.gps.listing">
-      <div class="col-sm-6">
-        <img ng-src="{{selected.image_645_430_url}}" class="propertyimage">
+    <div class="row" ng-repeat="selected in groupsPropsShow.gps.listing">
+      <div class="col-sm-6 col-md-6 col-lg-12">
+        <img ng-src="{{ selected.image_645_430_url }}" class="propertyImage">
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-6 col-md-6 col-lg-12">
         <ul>
-          <li></li>
-          <li><strong>Bedrooms: </strong>{{selected.num_bedrooms}}</li>
-          <li><strong>Property Type: </strong>{{selected.property_type}}</li>
-          <li><strong>Price: </strong>£{{selected.rental_prices.per_month}} ppm</li>
-          <li class="address"><strong>Address: </strong>{{selected.displayable_address}}</li>
-          <button ng-click="groupsPropsShow.deleteProperty(selected)" ng-if="main.isAuthenticated()" class="deleteproperty">Delete Property</button>
+          <li><strong>Bedrooms: </strong>{{ selected.num_bedrooms }}</li>
+          <li><strong>Property Type: </strong>{{ selected.property_type }}</li>
+          <li><strong>Price: </strong>£{{ selected.rental_prices.per_month }} ppm</li>
+          <li class="address"><strong>Address: </strong>{{ selected.displayable_address }}</li>
+          <button ng-click="groupsPropsShow.deleteProperty(selected)" ng-if="main.isAuthenticated()">Delete Property</button>
         </ul>
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-12">
-        <p ng-repeat="selected in groupsPropsShow.gps.listing" class="description">{{selected.description}}</p>
+      <div class="col-sm-12 col-md-6 col-lg-12">
+        <p ng-repeat="selected in groupsPropsShow.gps.listing" class="description">{{ selected.description }}</p>
       </div>
     </div>
-    <div ng-repeat="selected in groupsPropsShow.gps.listing" class="border">
+    <div ng-repeat="selected in groupsPropsShow.gps.listing" class="agencyInfo">
       <ul>
         <h3>Agency Info</h3>
-        <li><strong>Company: </strong>{{selected.agent_name}}</li>
-        <li><strong>Contact: </strong><a href="tel:{{selected.agent_phone}}" class="number">{{selected.agent_phone}}</a></li>
+        <li>
+          <strong>Company: </strong>{{ selected.agent_name }}</li>
+        <li>
+          <strong>Contact: </strong>
+          <a href="tel:{{selected.agent_phone}}" class="number">{{selected.agent_phone}}</a>
+        </li>
       </ul>
     </div>
-    <h3 class= "border">Ratings</h3>
     <div class="ratingList">
-      <div ng-repeat="rating in groupsPropsShow.prop.rating track by $index" class="col-sm-4 col-md-4 col-lg-4 margin-bottom">
+      <h3>Ratings</h3>
+      <div ng-repeat="rating in groupsPropsShow.prop.rating track by $index" class="col-sm-4 col-md-4 col-lg-4">
         <strong>{{ rating.createdBy.username }}</strong>
         <span uib-rating ng-model="rating.opinion" max="groupsPropsShow.max" read-only="groupsPropsShow.isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></span>
         <button type="button" ng-click="groupsPropsShow.deleteRating(rating)" class="close" aria-label="Close"><span aria-hidden="true">&times;</span>
@@ -45,18 +47,15 @@
         <button class="addimage">Add Rating</button>
       </form>
     </div>
-    <div class="border overflow">
+    <div class="overflow">
       <div class="col-md-6 col-lg-6">
-
         <h3>Images</h3>
         <div class ="row">
-
-            <div ng-repeat="image in groupsPropsShow.prop.images track by $index" class="col-sm-4 col-md-4 col-lg-4">
-              <img ng-click="groupsPropsShow.openModal(image)" ng-src="{{ image.imageSRC }}" class="userimages img-fluid img-thumbnail">
-              <button ng-click="groupsPropsShow.deleteImage(image)" class="deleteimage">Delete</button>
-            </div>
+          <div ng-repeat="image in groupsPropsShow.prop.images track by $index" class="col-sm-4 col-md-4 col-lg-4">
+            <img ng-click="groupsPropsShow.openModal(image)" ng-src="{{ image.imageSRC }}" class="userimages img-fluid img-thumbnail">
+            <button ng-click="groupsPropsShow.deleteImage(image)" class="deleteimage">Delete</button>
+          </div>
         </div>
-
         <div class="addimages row">
           <form ng-submit="groupsPropsShow.addImage()" ng-if="main.isAuthenticated()" class="form-group">
             <input type="file" id="image" base64 name="base64" ng-model="groupsPropsShow.newImage.base64" class="base64 form-control" style="display: none;">
@@ -68,11 +67,9 @@
       <div class="col-md-6 col-lg-6">
         <div class="row">
           <h3>Notes</h3>
-
           <div ng-repeat="note in groupsPropsShow.prop.notes track by $index" class="col-sm-3 col-md-3 col-lg-3 noteHeight">
             <strong>{{ note.createdBy.username }}</strong><br><p class="noteText">{{ note.text }}</p><br>
             <button ng-click="groupsPropsShow.deleteNote(note)" class="smaller">Delete</button>
-
           </div>
         </div>
         <div class="row addNotes">
@@ -84,7 +81,7 @@
         </div>
       </div>
     </div>
-    <div class="row border">
+    <div class="row">
       <div class="col-sm-offset-1 col-sm-4 crimePie"><h3>Recent crime</h3>
         <canvas id="doughnut" class="chart chart-doughnut" chart-data="groupsPropsShow.crimes.pieCrimeData" chart-labels="groupsPropsShow.labels" chart-legend="false">
         </canvas>

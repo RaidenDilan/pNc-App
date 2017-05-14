@@ -1,7 +1,7 @@
 <section class="container">
-  <div class="brand-style">
+  <div class="usersShowPage">
     <h1>{{ usersShow.user.username }}</h1>
-    <img ng-src="{{ usersShow.user.profileImageSRC }}" class="profileimage">
+    <img ng-src="{{ usersShow.user.profileImageSRC }}" class="profileImage">
     <h3>{{usersShow.user.firstname}} {{usersShow.user.surname}}</h3>
     <button ui-sref="usersEdit({ id: usersShow.user.id })" class="edit">Edit</button>
     <button ng-click="usersShow.delete()">Delete</button>

@@ -5,6 +5,19 @@
 @import 'keyframes';
 @import 'navbar';
 @import 'section';
+@import 'forms';
+@import 'loginForm';
+@import 'registerForm';
+@import 'usersShow';
+@import 'usersEdit';
+@import 'groupsNew';
+@import 'groupsHome';
+@import 'groupsShow';
+@import 'propsIndex';
+@import 'propsShow';
+@import 'footer';
+// @import 'groupsIndex';
+// @import 'groupsEdit';
 
 * {
   box-sizing: border-box;
@@ -26,39 +39,6 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-span {
-  color: red;
-}
-
-footer {
-  text-align: center;
-  letter-spacing: 4px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-top: 2px solid $bright-green;
-  background-color: rgba(175, 232, 89, 0.70);
-}
-
-.row-centered {
-    text-align:center;
-}
-
-.col-centered {
-    display:inline-block;
-    float:none;
-    text-align:left;
-    margin-right:-4px;
-}
-
-.propo {
-  text-align: center;
-  margin-left: 400px;
-}
-
-.propinfo {
-  margin: 70px 0;
-}
-
 .groupusersimages {
   text-align: center;
   float: center;
@@ -71,28 +51,6 @@ footer {
   margin-left: auto;
 }
 
-.map {
-  text-align: center;
-  ng-map {
-    height: 360px;
-  }
-}
-
-.addimage {
-  margin: 5px;
-  padding: 5px 6px;
-  border-radius: 10px;
-}
-
-.addimages, .addNotes {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.addcomment {
-  padding: 5px 180px;
-}
-
 .propTile {
   text-align: center;
   margin-top: 10px;
@@ -102,93 +60,8 @@ footer {
   text-align: center;
 }
 
-.app-modal-window .modal-dialog {
-  width: 70%;
-}
-
-.ratingList {
-  overflow: auto;
-}
-
-.ratings {
-  margin-top: 30px;
-
-}
-
-.deleteimage,.smaller {
-  display: inline;
-  margin: 0;
-  position: relative;
-  padding: 5px;
-  font-size: 12px;
-  background-color: white;
-  border: 1px solid black;
-}
-
-.modal-footer {
-  height: 80px;
-}
-
-.crimePie {
-  text-align: center;
-}
-
 .inline {
   display: inline-block;
-}
-
-.description {
-  text-align: justify;
-  font-size: 15px;
-  display: flex;
-  letter-spacing: 1px;
-  animation: none;
-  color: black;
-  border-top: 1px solid $bright-green;
-  padding: 20px 0;
-}
-
-.brand-style {
-  background-color: rgba(175, 232, 89, 0.70);
-  // background-color: rgba(0, 0, 0, 0.40);
-  margin: 0 200px;
-  border-radius: 25px;
-  padding: 30px;
-}
-
-.border {
-  border-top: 1px solid black;
-  padding: 20px 0;
-}
-
-.overflow {
-  overflow: hidden;
-}
-
-.site {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
-.site-content {
-  flex: 1;
-}
-
-.noteText {
-  text-align: center;
-  font-size: 12px;
-  display: flex;
-  letter-spacing: 1px;
-  animation: none;
-  color: black;
-  border-top: 1px solid $bright-green;
-  padding: 5px 0;
-}
-
-.ratingBox {
-  margin: 0 auto;
-  width: 40%;
 }
 
 .bigger {
@@ -196,9 +69,6 @@ footer {
   opacity: 1;
   color: black;
 
-}
-.noteHeight {
-  height: 100px;
 }
 
 .margin-bottom {

@@ -5,31 +5,32 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Project 3</title>
-  <link rel="icon" href="/images/pnc.png" type="image/png">
+  <link rel="icon" href="/images/home.jpg" type="image/jpg">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyyFhjzC4J7Ss_Eprz1hM7z8sCT10EvRI"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAk-4gE1b75JC2Odm02_eVhnSIqUUD57xI"></script>
   <!-- inject:js -->
   <!-- endinject -->
   <!-- inject:css -->
   <!-- endinject -->
 </head>
-<body ng-controller="MainCtrl as main" class="site">
-  <nav>
-    <div class="links">
-      <ul class="link">
-        <li ng-if="main.isAuthenticated()"><a ui-sref="propsIndex">Find Properties</a></li>
-        <li ng-if="(main.isAuthenticated() && main.currentUserGroupId)"><a ui-sref="groupsHome({ id: main.currentUserGroupId })">My Group</a></li>
-        <li ng-if="main.isAuthenticated() && !main.currentUserGroupId"><a ui-sref="groupsNew">Add a Group</a></li>
-        <li ng-if="main.isAuthenticated()"><a ui-sref="usersShow({ id: main.currentUserId })">Profile</a></li>
-        <li ng-if="main.isAuthenticated()"><a id="logout-link" ng-click="main.logout()" href="#">Logout</a></li>
-        <li ng-if="!main.isAuthenticated()"><a ui-sref="login">Login</a></li>
-        <li ng-if="!main.isAuthenticated()"><a ui-sref="register">Register</a></li>
-      </ul>
-    </div>
-  </nav>
-  <div class="message" ng-if="main.message">{{ main.message }}</div>
-  <main ui-view class="site-content"></main>
-  <footer>Made With <span>&hearts;</span> @ General Assembly London</footer>
-  <!-- <footer>WE DA BEST    - Big <span>&hearts;</span> from The Pretty Mongooses</footer> -->
-</body>
+  <body ng-controller="MainCtrl as main" class="site">
+    <nav>
+      <div class="links">
+        <ul class="link">
+          <li ng-if="main.isAuthenticated()"><a ui-sref="propsIndex">Find Properties</a></li>
+          <li ng-if="(main.isAuthenticated() && main.currentUserGroupId)"><a ui-sref="groupsHome({ id: main.currentUserGroupId })">My Group</a></li>
+          <li ng-if="main.isAuthenticated() && !main.currentUserGroupId"><a ui-sref="groupsNew">Add a Group</a></li>
+          <li ng-if="main.isAuthenticated()"><a ui-sref="usersShow({ id: main.currentUserId })">Profile</a></li>
+          <li ng-if="main.isAuthenticated()"><a id="logout-link" ng-click="main.logout()" href="#">Logout</a></li>
+          <li ng-if="!main.isAuthenticated()"><a ui-sref="login">Login</a></li>
+          <li ng-if="!main.isAuthenticated()"><a ui-sref="register">Register</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="message" ng-if="main.message">{{ main.message }}</div>
+    <main ui-view class="site-content">
+    </main>
+    <footer>Made With <span>&hearts;</span> @ General Assembly London</footer>
+    <!-- <footer>WE DA BEST    - Big <span>&hearts;</span> from The Pretty Mongooses</footer> -->
+  </body>
 </html>

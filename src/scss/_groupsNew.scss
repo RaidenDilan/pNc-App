@@ -1,0 +1,7 @@
+.userSearchResults {
+  display: inline-block;
+  color: $white;
+  &:hover {
+    border: 1px dashed #000;
+  }
+}

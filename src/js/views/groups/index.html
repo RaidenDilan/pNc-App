@@ -1,11 +1,11 @@
 <section class="container">
-  <div class="brand-style">
+  <div>
     <h1>My Group</h1>
-    <div ng-repeat="group in groupsIndex.all" class="border">
+    <div ng-repeat="group in groupsIndex.all">
       <a ui-sref="groupsHome({ id: group.id })" class="group"><h1>{{ group.groupName }}</h1></a>
       <div ng-repeat="user in group.users">
         <h2>{{ user.username }}</h2>
-        <img ng-src="{{ user.profileImageSRC }}" class="userimage">
+        <img ng-src="{{ user.profileImageSRC }}">
       </div>
     </div>
   </div>

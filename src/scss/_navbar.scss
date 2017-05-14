@@ -1,5 +1,5 @@
 nav {
-  background-color: rgba(175, 232, 89, 0.70);
+  background-color: $brand-color;
   div {
     ul {
       text-align: center;
@@ -33,7 +33,7 @@ nav {
           content: "";
           height: 2px;
           width: 100%;
-          background-color: $main-green;
+          background-color: $black;
           position: absolute;
             bottom: -5px;
           left: 0;
@@ -48,7 +48,7 @@ nav {
         &:hover {
           margin-top: 10px;
           text-decoration: none;
-          color: $main-green;
+          color: $white;
             &:after {
               text-decoration: none;
               opacity: 1;

@@ -23,13 +23,12 @@
           </div>
         </div>
         <br>
-        <p>Chosen Users:</p>
+        <p id="ChosenUsers">Chosen Users:</p>
         <div ng-repeat="user in groupsNew.chosenUsers">
-          {{ user.username }}
+          <em id="users">{{ user.username }}</em>
           <img ng-src="{{ user.profileImageSRC }}">
-          <a href="#" ng-click="groupsNew.removeUser(user)">x</a>
+          <a href="#" ng-click="groupsNew.removeUser(user)" class="removeUser">Remove User</a>
         </div>
-
         <button class="button">Create</button>
       </form>
     </div>

@@ -1,0 +1,95 @@
+form {
+  label {
+    text-transform: uppercase;
+    // padding-top: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    color: $white;
+  }
+  input {
+    display: block;
+    padding: 5px 10px;
+    width: 100%;
+    text-align: center;
+    outline: none;
+    margin: 10px auto;
+    border: none;
+    border-radius: 10px;
+    color: #000000;
+  }
+  input[type="file"] {
+    margin: 5px auto;
+    width: 100%;
+    background: $black;
+    border: 2px solid #01A3BC;
+    height: 30px;
+    border-radius: 10px;
+    color: $black;
+    font-size: 14px;
+    outline: 0;
+    transition: all .5s ease;
+    text-transform: uppercase;
+    text-align: center;
+    &:hover {
+      background: 0 0;
+      color: $button-color;
+    }
+  }
+  #ChosenUsers {
+    color: $white;
+    padding: 10px;
+  }
+  #users {
+    color: $white;
+  }
+  img {
+    max-width: 15%;
+    margin: 5px;
+    border-radius: 100%;
+    border: 2px solid $white;
+    &:hover {
+      border: 5px solid $black;
+    }
+  }
+  a {
+    .removeUser {
+      color: $white;
+    }
+  }
+}
+
+.choose {
+  padding-top: 12px;
+  position: relative;
+  overflow: hidden;
+  margin: 5px auto;
+  width: 100%;
+  background: $white;
+  border: 1px solid $black;
+  height: 40px;
+  border-radius: 10px;
+  color: $black;
+  font-size: 14px;
+  font-weight: bold;
+  outline: 0;
+  transition: all .5s ease;
+  text-transform: uppercase;
+  text-align: center;
+  &:hover {
+    background: 0 0;
+    border-color: $black;
+    color: $white;
+  }
+}
+
+.choose input.upload {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
