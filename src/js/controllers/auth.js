@@ -12,9 +12,9 @@ function RegisterCtrl($auth, $state) {
     if(vm.registerForm.$valid) {
       $auth.signup(vm.user)
         .then(() => $state.go('login'));
+      vm.registerForm.$setUntouched();
+      vm.registerForm.$setPristine();
     }
-    // vm.registerForm.$setUntouched();
-    // vm.registerForm.$setPristine();
   }
   vm.submit = submit;
 }
@@ -28,9 +28,9 @@ function LoginCtrl($auth, $state) {
     if(vm.loginForm.$valid) {
       $auth.login(vm.credentials)
         .then(() => $state.go('usersShow', { id: $auth.getPayload().userId }));
+      vm.loginForm.$setUntouched();
+      vm.loginForm.$setPristine();
     }
-    // vm.loginForm.$setUntouched();
-    // vm.loginForm.$setPristine();
   }
   vm.submit = submit;
 

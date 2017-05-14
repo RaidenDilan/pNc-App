@@ -1,7 +1,10 @@
 @import 'reset';
-
-$main-green: #8FCF91;
-$bright-green: #AFE859;
+@import 'devices';
+@import 'variables';
+@import 'extends';
+@import 'keyframes';
+@import 'navbar';
+@import 'section';
 
 * {
   box-sizing: border-box;
@@ -15,291 +18,36 @@ a {
   }
 }
 
+h1 {
+  @extend .heading-styles;
+}
+
 body {
-  font-family: 'Raleway', serif;
-  // overflow: hidden;
+  font-family: 'Raleway', sans-serif;
+}
+
+span {
+  color: red;
+}
+
+footer {
+  text-align: center;
+  letter-spacing: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 2px solid $bright-green;
+  background-color: rgba(175, 232, 89, 0.70);
 }
 
 .row-centered {
     text-align:center;
 }
+
 .col-centered {
     display:inline-block;
     float:none;
-    /* reset the text-align */
     text-align:left;
-    /* inline-block space fix */
     margin-right:-4px;
-}
-
-
-.heading-styles {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-h1 {
-  @extend .heading-styles;
-}
-
-nav {
-  div {
-    ul {
-      text-align: center;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      padding-top: 30px;
-      text-decoration: none;
-      li {
-        font-size: 17px;
-        display: inline-block;
-        margin-left: 5px;
-        line-height: 40px;
-        padding: 0 10px;
-        &.menu {
-          text-decoration: none;
-          color: black;
-          cursor: pointer;
-          display: none;
-          font-size: 20px;
-        }
-        a {
-          color: black;
-          @extend .heading-styles;
-          font-weight: 600;
-          position: relative;
-          text-decoration: none;
-          letter-spacing: 2px;
-          &:after {
-            content: "";
-            height: 2px;
-            width: 100%;
-            background-color: $main-green;
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            opacity: 0;
-            transition: opacity 0.6s ease;
-            text-decoration: none;
-          }
-          &:active, &:focus {
-            text-decoration: none;
-            color: $main-green;
-          }
-          &:hover {
-            margin-top: 10px;
-            text-decoration: none;
-            color: $main-green;
-            &:after {
-              text-decoration: none;
-              opacity: 1;
-            }
-
-          }
-        }
-      }
-    }
-  }
-}
-
-section {
-  h1 {
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-  }
-  h2 {
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-  }
-  h3 {
-    font-size: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding-bottom: 10px;
-  }
-  margin-top: 80px;
-  text-align: center;
-  div {
-    h4 {
-      font-size: 25px;
-      text-transform: uppercase;
-    }
-    a {
-      text-transform: uppercase;
-    }
-    .results {
-      margin-top: 15px;
-    }
-    img {
-      max-width: 60%;
-      margin: 10px;
-      &.propertyimage {
-        max-width: 100%;
-      }
-    }
-    .groupUsers {
-      background-position: center;
-      background-size: cover;
-      border-radius: 100%;
-      width: 100%;
-      &:after {
-        content: "";
-        display: block;
-        padding: 50%;
-      }
-    }
-    .userSearchResults {
-      display: inline-block;
-      &:hover {
-        border: 1px dashed #000;
-      }
-    }
-    .chart {
-      &.chart-doughnut {
-        &.ng-isolate-scope {
-          padding: 0;
-          // margin-right: 50px;
-          max-width: 100%;
-          // max-height: 300px;
-        }
-      }
-    }
-    form {
-      label {
-        text-transform: uppercase;
-        padding-top: 10px;
-        font-weight: bold;
-        font-size: 15px;
-      }
-      input {
-        display: block;
-        margin: 0 auto;
-        margin-top: 5px;
-        padding: 3px 10px;
-        width: 500px;
-        text-align: center;
-        border: 0;
-        border-bottom: 2px solid black;
-        outline: none;
-        &.base64 {
-          border: none;
-          // text-align: center;
-          outline: none;
-          cursor: pointer;
-          width: 45%;
-          margin-top: 10px;
-        }
-        &.area {
-          text-transform: capitalize;
-        }
-      }
-      textarea {
-        width: 400px;
-        height: 50px;
-        outline: none;
-      }
-    }
-    button {
-      padding: 10px;
-      margin: 10px 0;
-      text-transform: uppercase;
-      margin-top: 15px;
-      font-weight: 600;
-      background-color: white;
-      border: 1px solid black;
-      outline: none;
-      border-radius: 10px;
-      &:hover {
-        background-color: $bright-green;
-        transition: all 1.5s ease;
-        outline: none;
-      }
-      &:active {
-        outline: none;
-      }
-      &.edit {
-        padding: 10px 25px;
-      }
-      &.search {
-        padding: 7px 220px;
-      }
-      &.comment {
-        padding: 5px 130px;
-      }
-      &.deletecomment {
-        margin: 0;
-        &:hover {
-          background-color: rgb(255, 91, 91);
-          transition: all 1.5s ease;
-          outline: none;
-        }
-      }
-      &.deleteproperty {
-        margin: 0;
-        margin-top: 20px;
-        &:hover {
-          background-color: rgb(255, 234, 91);
-          transition: all 1.5s ease;
-          outline: none;
-        }
-      }
-    }
-    ul {
-      li {
-        button {
-          padding: 5px;
-          font-size: 10px;
-          background-color: white;
-          border: 1px solid black;
-        }
-        padding: 10px;
-        &.description {
-          text-align: justify;
-          font-size: 15px;
-          display: flex;
-          letter-spacing: 1px;
-        }
-        strong {
-          font-weight: 900;
-          text-transform: uppercase;
-        }
-        a {
-          &.number {
-            font-size: 17px;
-          }
-        }
-      }
-    }
-    .image {
-      max-width: 80%;
-    }
-    a {
-      font-size: 23px;
-    }
-    .listings {
-      text-transform: uppercase;
-    }
-    div {
-      p {
-        color: red;
-        animation: expandOpen 1s;
-      }
-    }
-    img {
-      &.userimage {
-        max-width: 20%;
-      }
-      &.profileimage {
-        max-width: 40%;
-      }
-    }
-  }
 }
 
 .propo {
@@ -324,9 +72,6 @@ section {
 }
 
 .map {
-  // width: 300px;
-  // padding: 0;
-  // margin-left: 200px;
   text-align: center;
   ng-map {
     height: 360px;
@@ -361,166 +106,7 @@ section {
   width: 70%;
 }
 
-@keyframes expandOpen {
-	0% {
-		transform: scale(0.7);
-	}
-	100% {
-		transform: scale(1);
-	}
-}
-
-.userimages {
-  width: 200px;
-  padding: 0;
-  height: 150px;
-}
-
-// IPHONE 5
-@media only screen and (min-width: 320px) and (max-width: 568px) {
-
-  nav {
-    div {
-      margin-left: 5px;
-      ul {
-        padding-top: 10px;
-        margin-top: 30px;
-        li {
-          text-align: center;
-          font-size: 15px;
-          font-weight: bolder;
-          margin-left: 0;
-          a {
-            padding-right: 5px;
-          }
-        }
-      }
-    }
-  }
-
-  section {
-    margin-top: 30px;
-    div {
-      form {
-        input {
-          width: 100%;
-        }
-        textarea {
-          border: 1px solid black;
-          width: 100%;
-        }
-      }
-      img {
-        max-width: 90%;
-        &.propertyimage {
-          float: none;
-          max-width: 90%;
-        }
-        &.profileimage {
-          max-width: 70%;
-        }
-        &.groupUsers {
-          margin-bottom: 10px;
-          padding: 0;
-        }
-        &.userimages {
-          width: 370px;
-          height: auto;
-          text-align: center;
-          margin: 0;
-          margin-top: 5px;
-          padding: 0;
-        }
-      }
-      ul {
-        li {
-          &.description {
-            padding: 0 30px;
-            padding-top: 20px;
-          }
-          strong {
-            font-weight: 900;
-          }
-        }
-      }
-      button {
-        &.search {
-          padding: 7px 120px;
-        }
-        &.deleteproperty {
-          margin-left: 20px;
-        }
-        &.addcomment {
-          padding: 10px 0;
-          width: 100%;
-        }
-      }
-      &.map {
-        // width: 350px;
-        // height: 350px;
-        margin-bottom: 0;
-      }
-      &.gallery {
-        max-width: none;
-      }
-      &.propo {
-        margin-left: 65px;
-        padding-left: 10px;
-      }
-    }
-    h2 {
-      font-size: 25px;
-      font-weight: bold;
-      margin-bottom: 30px;
-    }
-  }
-
-  .container {
-    // padding-left: 5px;
-    // padding-right: 5px;
-    // margin-left: 5px;
-    // margin-right: 5px;
-  }
-
-  .app-modal-window .modal-dialog {
-    width: 95%;
-  }
-
-  .area {
-    text-transform: capitalize;
-  }
-  .crimePie {
-    margin: 0;
-    margin-right: 0;
-    float: none;
-    // padding-right: 0;
-    // margin-left: 45px;
-    margin-bottom: 30px;
-    // border-bottom: 2px solid $main-green;
-  }
-
-
-  button {
-    &.deleteimage {
-      margin: 5px 0;
-    }
-    &.deletenote {
-      padding: 5px;
-    }
-  }
-}
-
-// IPHONE 6
-@media only screen and (min-width : 375px) and (max-width : 667px) {
-
-}
-
-// RECENT IPADS
-@media only screen and (min-width : 768px) and (max-width : 1024px)  {
-
-}
 .ratingList {
-  // margin-bottom: 60px;
   overflow: auto;
 }
 
@@ -539,25 +125,16 @@ section {
   border: 1px solid black;
 }
 
-.modal-footer{
+.modal-footer {
   height: 80px;
 }
-.crimePie{
-  // width: 300px;
+
+.crimePie {
   text-align: center;
-  // margin-right: 50px;
 }
 
-.inline{
+.inline {
   display: inline-block;
-}
-
-footer {
-  text-align: center;
-  letter-spacing: 4px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-top: 2px solid $bright-green;
 }
 
 .description {
@@ -571,9 +148,16 @@ footer {
   padding: 20px 0;
 }
 
+.brand-style {
+  background-color: rgba(175, 232, 89, 0.70);
+  // background-color: rgba(0, 0, 0, 0.40);
+  margin: 0 200px;
+  border-radius: 25px;
+  padding: 30px;
+}
 
 .border {
-  border-top: 1px solid $bright-green;
+  border-top: 1px solid black;
   padding: 20px 0;
 }
 
@@ -589,10 +173,6 @@ footer {
 
 .site-content {
   flex: 1;
-}
-
-span {
-  color: $bright-green;
 }
 
 .noteText {
@@ -617,10 +197,16 @@ span {
   color: black;
 
 }
-.noteHeight{
+.noteHeight {
   height: 100px;
 }
 
 .margin-bottom {
   margin-bottom: 25px;
+}
+
+.userimages {
+  width: 200px;
+  padding: 0;
+  height: 150px;
 }
