@@ -36,7 +36,7 @@
       <div ng-repeat="rating in groupsPropsShow.prop.rating track by $index" class="col-sm-4 col-md-4 col-lg-4">
         <strong>{{ rating.createdBy.username }}</strong>
         <span uib-rating ng-model="rating.opinion" max="groupsPropsShow.max" read-only="groupsPropsShow.isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></span>
-        <button type="button" ng-click="groupsPropsShow.deleteRating(rating)" class="close" aria-label="Close"><span aria-hidden="true">&times;</span>
+        <button type="button" ng-click="groupsPropsShow.deleteRating(rating)" class="close" aria-label="Close"><span aria-hidden="true">Delete</span>
         </button>
       </div>
     </div>

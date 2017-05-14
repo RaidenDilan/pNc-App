@@ -3,16 +3,17 @@
 
   nav {
     div {
-      margin-left: 5px;
+      margin-left: 0;
       ul {
         padding-top: 10px;
         margin-top: 30px;
         li {
           text-align: center;
-          font-size: 15px;
+          font-size: 15px !important;
           font-weight: bolder;
           margin-left: 0;
           a {
+            color: white !important;
             padding-right: 5px;
           }
         }
@@ -33,7 +34,6 @@
         }
       }
       img {
-        max-width: 90%;
         &.propertyimage {
           float: none;
           max-width: 90%;
@@ -56,10 +56,6 @@
       }
       ul {
         li {
-          &.description {
-            padding: 0 30px;
-            padding-top: 20px;
-          }
           strong {
             font-weight: 900;
           }
@@ -76,9 +72,6 @@
           padding: 10px 0;
           width: 100%;
         }
-      }
-      &.map {
-        margin-bottom: 0;
       }
       &.gallery {
         max-width: none;
@@ -102,13 +95,6 @@
   .area {
     text-transform: capitalize;
   }
-  .crimePie {
-    margin: 0;
-    margin-right: 0;
-    float: none;
-    margin-bottom: 30px;
-  }
-
 
   button {
     &.deleteimage {
@@ -116,6 +102,140 @@
     }
     &.deletenote {
       padding: 5px;
+    }
+  }
+
+  .groupsShowPage {
+    padding: 0 !important;
+    button.close {
+      width: 30% !important;
+    }
+    ul {
+      li {
+        width: 90% !important;
+      }
+    }
+    button {
+      width: 90% !important;
+    }
+    h3 {
+      padding: 0 0 20px 0 !important;
+    }
+    .smaller {
+      width: 30% !important;
+    }
+    textarea {
+      width: 90% !important;
+    }
+    .crimePie {
+      margin: 25px !important;
+    }
+    .deleteimage {
+      margin: 10px auto !important;
+    }
+    ng-map {
+      margin: 15px !important;
+      height: 250px !important;
+      border: 5px solid black;
+    }
+  }
+  .description {
+    font-size: 10px !important;
+    padding: 10px !important;
+    padding-top: 20px;
+  }
+  .ratingBox {
+    width: 50% !important;
+  }
+  .addimage {
+    margin: 10px !important;
+  }
+  .noteText {
+    text-align: center !important;
+    margin: auto;
+    display: block !important;
+  }
+  #loginFormDiv {
+    width: 100% !important;
+    margin: 50px auto !important;
+  }
+  .usersShowPage {
+    width: 100% !important;
+    margin: 50px auto !important;
+    button {
+      width: 100% !important;
+      margin: 5px auto !important;
+    }
+  }
+  .usersEditPage {
+    width: 100% !important;
+    margin: 50px auto !important;
+    button {
+      width: 100% !important;
+      margin: 5px auto !important;
+    }
+  }
+  .groupsHomePage {
+    button {
+      width: 100% !important;
+    }
+  }
+  .propsIndexPage {
+    margin-top: 40px !important;
+    width: 100% !important;
+    input {
+      width: 100% !important;
+    }
+    .search {
+      width: 100% !important;
+    }
+    .results {
+      ul {
+        li {
+          width: 100% !important;
+          font-size: 12px !important;
+          &:nth-child(1) {
+            padding: 0 !important;
+          }
+          img {
+            width: 100% !important;
+          }
+          .ZooplaImage {
+            padding: 0 !important;
+            width: 100% !important;
+          }
+        }
+      }
+      button {
+        width: 100% !important;
+      }
+    }
+  }
+  .modal-content {
+    margin: 25px auto !important;
+  }
+  .app-modal-window, .modal-dialog {
+    width: 95% !important;
+    margin: 0 auto !important;
+  }
+  .propertyImage {
+    width: 90% !important;
+  }
+  .close {
+    color: black !important;
+    padding: 3px !important;
+    margin: 5px auto !important;
+    float: none !important;
+    font-size: 12px !important;
+    opacity: 1 !important;
+    background-color: white !important;
+  }
+  footer {
+    font-size: 15px !important;
+    letter-spacing: normal !important;
+    color: white !important;
+    span {
+      color: red !important;
     }
   }
 }
