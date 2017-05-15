@@ -68,9 +68,9 @@ A Users can upload images from the property they viewed, give star ratings and w
 
 Writing the group function for creating a group and populating it users was very challenging. my team mates and I pair coded for this particular function. After many console logs and checking the the back end from terminal, we were finally able to populate a group with users.
 
-###Project Forking
+<h3>Project Forking</h3>
 
-######In Terminal
+<h5>In Terminal</h5>
 * npm i && bower i
 
 <center><strong>Copyright © pNc</strong></center>
