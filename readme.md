@@ -73,4 +73,6 @@ Writing the group function for creating a group and populating it users was very
 <h5>In Terminal</h5>
 * npm i && bower i
 
+<br>
+
 <center><strong>Copyright © pNc</strong></center>
