@@ -15,6 +15,7 @@
           a {
             color: white !important;
             padding-right: 5px;
+            font-size: 12px !important;
           }
         }
       }
@@ -241,6 +242,15 @@
       color: red !important;
     }
   }
+  .modal-body {
+    padding: 15px !important;
+  }
+  .modal-footer {
+    .storeProperty {
+      width: 89% !important;
+    }
+  }
+
 }
 
 

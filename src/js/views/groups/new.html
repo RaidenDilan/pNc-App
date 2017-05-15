@@ -1,5 +1,5 @@
 <section class="container">
-  <div class="brand-style">
+  <div class="groupsNewPage">
     <h1>Create a Group</h1>
     <div>
       <form name="groupsNew.groupsNewForm" ng-submit="groupsNew.create(users)" novalidate>
@@ -24,11 +24,14 @@
         </div>
         <br>
         <p id="ChosenUsers">Chosen Users:</p>
-        <div ng-repeat="user in groupsNew.chosenUsers">
+
+        <div ng-repeat="user in groupsNew.group.users">
+          {{ user.users }}
           <em id="users">{{ user.username }}</em>
-          <img ng-src="{{ user.profileImageSRC }}">
+          <img ng-src="{{ user.profileImageSRC }}" alt="{{ user.username }}">
           <a href="#" ng-click="groupsNew.removeUser(user)" class="removeUser">Remove User</a>
         </div>
+
         <button class="button">Create</button>
       </form>
     </div>

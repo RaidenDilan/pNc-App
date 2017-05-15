@@ -1,25 +1,52 @@
+.propTile {
+  margin-top: 0;
+  div {
+    button {
+      width: 92%;
+      border: 2px solid $brand-color;
+      &:hover {
+        color: $white;
+      }
+    }
+    button:nth-child(2) {
+      width: 100%;
+    }
+  }
+}
+
 .app-modal-window, .modal-dialog {
   margin: 60px auto;
   width: 70%;
 }
 
 .modal-header {
+  padding: 0;
+  padding: 0 0 4px 0;
+  border-bottom: 2px solid $brand-color;
   span {
-    color: $black;
+    color: $brand-color;
     font-size: 20px;
-    padding: 10px;
     margin: 0;
+    &:hover {
+      color: $white;
+    }
   }
 }
 
 .modal-body {
+  padding: 30px;
   img {
     width: 100%;
-    border: 2px solid $black;
+    border: 2px solid $brand-color;
     border-radius: 10px;
   }
   h3 {
     margin: 5px;
+  }
+  ul {
+    li:nth-child(1) {
+      padding: 0;
+    }
   }
 }
 
@@ -28,11 +55,18 @@
 }
 
 .modal-footer {
+  border-top: 2px solid $brand-color;
   height: 80px;
+  padding: 0;
+  margin: 0;
+}
+
+button.storeProperty {
+  width: 90% !important;
 }
 
 .modalDescription {
-  border: 2px solid $black;
+  border: 2px solid $brand-color;
   border-radius: 10px;
   letter-spacing: 1px;
   text-align: left;
@@ -41,7 +75,7 @@
 .modalAgencyInfo {
   margin-top: 20px;
   li {
-    border: 2px solid $black;
+    border: 2px solid $brand-color;
     border-radius: 10px;
     margin: 5px auto;
   }

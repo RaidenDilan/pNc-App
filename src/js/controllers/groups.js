@@ -26,8 +26,6 @@ function GroupsNewCtrl(Group, User, filterFilter, $state, $auth, $scope) {
   vm.chosenUsers = [];
   vm.allUsers = User.query();
 
-  // console.log(vm.allUsers);
-
   const authUserId = $auth.getPayload().userId;
 
   function filterUsers() {
@@ -52,6 +50,8 @@ function GroupsNewCtrl(Group, User, filterFilter, $state, $auth, $scope) {
   vm.removeUser = removeUser;
 
   function groupsCreate() {
+
+
     if(vm.groupsNewForm.$valid) {
       vm.chosenUsers = [];
       if(!vm.group.users.includes(authUserId)) vm.group.users.push(authUserId);
@@ -81,6 +81,7 @@ function GroupsHomeCtrl(Group, $stateParams, $state, $http) {
       });
 
       ids = ids.join(',');
+      // console.log(ids);
 
       if(ids) $http.get('/api/groups/:id/properties', { params: { id: vm.group.id, listingId: ids } })
         .then((response) => {

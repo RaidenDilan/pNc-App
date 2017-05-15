@@ -1,7 +1,16 @@
+.groupsNewPage {
+  background-color: $brand-color;
+  margin: 80px auto;
+  border-radius: 25px;
+  padding: 10px;
+  width: 50%;
+}
+
 .userSearchResults {
   display: inline-block;
   color: $white;
-  &:hover {
-    border: 1px dashed #000;
-  }
+}
+
+.ChosenUsers {
+  color: hotpink;
 }
