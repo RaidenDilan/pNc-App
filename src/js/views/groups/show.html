@@ -2,10 +2,10 @@
   <div class="groupsShowPage">
     <h2>Property Details</h2>
     <div class="row" ng-repeat="selected in groupsPropsShow.gps.listing">
-      <div class="col-sm-6 col-md-6 col-lg-12">
+      <div class="col-sm-12 col-md-6 col-lg-12">
         <img ng-src="{{ selected.image_645_430_url }}" class="propertyImage">
       </div>
-      <div class="col-sm-6 col-md-6 col-lg-12">
+      <div class="col-sm-12 col-md-6 col-lg-12">
         <ul>
           <li><strong>Bedrooms: </strong>{{ selected.num_bedrooms }}</li>
           <li><strong>Property Type: </strong>{{ selected.property_type }}</li>
@@ -82,13 +82,14 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-offset-1 col-sm-4 crimePie"><h3>Recent crime</h3>
+      <div class="col-sm-offset-1 col-sm-4 crimePie">
+        <h3 class="mapAndCrime">Recent crime</h3>
         <canvas id="doughnut" class="chart chart-doughnut" chart-data="groupsPropsShow.crimes.pieCrimeData" chart-labels="groupsPropsShow.labels" chart-legend="false">
         </canvas>
       </div>
-      <div class="col-sm-4 col-sm-offset-2">
+      <div class="col-sm-4 col-sm-offset-1">
         <div class="map" ng-repeat="selected in groupsPropsShow.gps.listing">
-          <h3>Location</h3>
+          <h3 class="mapAndCrime">Location</h3>
           <ng-map center="[{{selected.latitude}}, {{selected.longitude}}]" zoom="13" scrollwheel="false">
             <marker position="[{{selected.latitude}}, {{selected.longitude}}]" animation="DROP"></marker>
           </ng-map>

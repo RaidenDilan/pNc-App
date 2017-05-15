@@ -258,3 +258,73 @@
     }
   }
 }
+
+@media only screen and (min-width : 768px) and (max-width : 1024px)  {
+  #loginFormDiv {
+    width: 80% !important;
+    margin: 300px auto !important;
+  }
+
+  #registerFormDiv {
+    width: 80% !important;
+    margin: 125px auto !important;
+  }
+
+  .usersShowPage {
+    width: 80% !important;
+    margin: 250px auto !important;
+  }
+
+  .usersEditPage {
+    width: 80% !important;
+    margin: 200px auto !important;
+    button {
+      width: 100% !important;
+    }
+  }
+
+  .groupsNewPage {
+    width: 80% !important;
+    margin: 200px auto !important;
+    button {
+      width: 100% !important;
+    }
+  }
+  .addUserImage {
+    width: 15% !important;
+  }
+  .app-modal-window, .modal-dialog {
+    width: 95% !important;
+    margin: 30px auto !important;
+  }
+  .propTile {
+    .storeProperty {
+      width: 91% !important;
+    }
+  }
+  .groupUsers {
+    width: 50% !important;
+  }
+  .groupsShowZooplaImage {
+    width: 90% !important;
+  }
+  .groupsHomePage {
+    button {
+      width: 90% !important;
+    }
+  }
+  .addcomment {
+    width: 59% !important;
+  }
+  ng-map {
+    width: 250px !important;
+    height: 270px !important;
+  }
+  canvas {
+    height: 270px !important;
+    width: 270px !important;
+  }
+  .mapAndCrime {
+    padding: 20px 0 20px 35px !important;
+  }
+}
