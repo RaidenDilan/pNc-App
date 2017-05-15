@@ -16,7 +16,7 @@
         </div>
         <div ng-if="!user.group" ng-repeat="user in groupsNew.filtered" ng-show="groupsNew.q.length > 0">
           <div ng-click="groupsNew.addUser(user)" class="userSearchResults">
-            <img ng-src="{{ user.profileImageSRC }}" alt="{{ user.username }}">
+            <img ng-src="{{ user.profileImageSRC }}" alt="{{ user.username }}" class="addUserImage">
             <div>
               {{ user.username }}
             </div>
@@ -26,9 +26,9 @@
         <p id="ChosenUsers">Chosen Users:</p>
 
         <div ng-repeat="user in groupsNew.group.users">
-          {{ user.users }}
-          <em id="users">{{ user.username }}</em>
-          <img ng-src="{{ user.profileImageSRC }}" alt="{{ user.username }}">
+          {{ user.username }}
+          <!-- <em id="users">{{ user.username }}</em> -->
+          <img ng-src="{{ user.porfileImageSRC }}" class="chosenUsersImage">
           <a href="#" ng-click="groupsNew.removeUser(user)" class="removeUser">Remove User</a>
         </div>
 

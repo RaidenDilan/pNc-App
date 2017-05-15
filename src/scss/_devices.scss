@@ -250,16 +250,11 @@
       width: 89% !important;
     }
   }
-
-}
-
-
-// IPHONE 6
-@media only screen and (min-width : 375px) and (max-width : 667px) {
-
-}
-
-// RECENT IPADS
-@media only screen and (min-width : 768px) and (max-width : 1024px)  {
-
+  .groupsNewPage {
+    width: 100% !important;
+    h1 {
+      font-size: 20px;
+      padding-top: 20px;
+    }
+  }
 }
